@@ -82,7 +82,7 @@ class DataCreator:
         print("reading file: {}".format(glove_fname))
         w2vec = pd.read_csv(glove_fname, header=None, sep=' ', quoting=3, encoding="ISO-8859-1")
         print("done")
-        vocab = w2vec.ix[:, 0].values
+        vocab = w2vec.iloc[:, 0].values
         vocab = set(vocab[:vocab_size])
 
         stop_words = set(stopwords.words("english"))
