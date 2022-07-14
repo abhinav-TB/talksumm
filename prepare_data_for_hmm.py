@@ -259,6 +259,7 @@ class DataCreator:
 
     # returns True on success, False otherwise
     def process_paper(self, json_data):
+        json_data = json_data['metadata']
         j_title = json_data['title']
         if j_title is None:
             return False
